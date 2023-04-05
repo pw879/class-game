@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Prod
+  - MyPlayer
+  - Enemy
+  - Weapon
+  - Chest
   layers:
   - Default
   - TransparentFX
@@ -11,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - post
   - 
   - 
   - 
@@ -40,4 +45,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3069149649
+    locked: 0
+  - name: overlay
+    uniqueID: 3762258287
+    locked: 0
+  - name: firing
+    uniqueID: 1589223801
     locked: 0
