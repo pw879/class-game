@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //Input Handled here
         //if(!isKnockingBack){
+            if(!DialogManager.instance.dialogBox.activeInHierarchy){
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
             animator.SetFloat("Horizontal", movement.x);
@@ -56,6 +57,10 @@ public class PlayerMovement : MonoBehaviour
                     Debug.Log("Bool is Attack");
                 }
                 isAttacking = true;
+            }
+            } else{
+                rb.velocity = Vector2.zero;
+                animator.SetFloat("Speed", 0);
             }
         //} else{
             //knockBackCounter -= Time.deltaTime;
