@@ -5,24 +5,34 @@ using UnityEngine;
 public class LargeDoorTriggerButton : MonoBehaviour
 {
     [SerializeField] private DoorSetActive door;
-    [SerializeField] private Transform playerTransform;
+    [SerializeField] private LargeDoorFloorTrigger floorTrigger;
+    private SFXManager sfxMan;
+
+    private Transform playerTransform;
     public float interactRadius;
     private bool isOpen = false;
+    public bool canOpen = true;
+
+    void Start(){
+        playerTransform = GameObject.FindWithTag("MyPlayer").transform;
+        sfxMan = FindObjectOfType<SFXManager>();
+    }
+    
 
     // Update is called once per frame
     void Update(){
-        Collider2D[] colliderArray = Physics2D.OverlapCircleAll(playerTransform.position, interactRadius );
-        foreach (Collider2D col in colliderArray){
-            DoorSetActive door = col.GetComponent<DoorSetActive>();
-            if(door != null){
-            if(Input.GetKeyDown(KeyCode.F) && isOpen == false){
-                door.openDoor();
-                isOpen = true;
-            } else if (Input.GetKeyDown(KeyCode.F) && isOpen == true){
-                door.closeDoor();
-                isOpen = false;
+        if(Input.GetKeyDown(KeyCode.F)  && isOpen == false && floorTrigger.isActive == true && canOpen == true){
+            door.openDoor();
+            isOpen = true;
+        } else if (Input.GetKeyDown(KeyCode.F) && isOpen == true && floorTrigger.isActive == true && canOpen == true){
+            door.closeDoor();
+            isOpen = false;
+        } else if(Input.GetKeyDown(KeyCode.F) && isOpen == false && floorTrigger.isActive == true && canOpen == false){
+            if(sfxMan){
+            sfxMan.DoorFail.Play();
             }
-            }
-        } 
+        }
     }
-}
+} 
+    
+

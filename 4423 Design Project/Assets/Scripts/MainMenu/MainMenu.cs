@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
     }
     //have to be public so that the button can read them
     public void NewGame(){
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Town 1");
 
     }
 

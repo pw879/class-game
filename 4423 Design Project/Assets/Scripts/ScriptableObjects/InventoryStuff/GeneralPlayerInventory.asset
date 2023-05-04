@@ -13,7 +13,29 @@ MonoBehaviour:
   m_Name: GeneralPlayerInventory
   m_EditorClassIdentifier: 
   myInventory:
-  - {fileID: 11400000, guid: 6b1090bcc32755c42aa7f586cb897a2b, type: 2}
-  - {fileID: 11400000, guid: 09fd1a588fb8e6f4383430e50880dea2, type: 2}
-  - {fileID: 11400000, guid: e6eeaecc2f065e64caf7572f2d59cbd0, type: 2}
   - {fileID: 11400000, guid: f98eb78d54bacf4478f9b4d5011091c3, type: 2}
+  - {fileID: 11400000, guid: da0933ec9f6b4ca469b31db29e20f69d, type: 2}
+  - {fileID: 11400000, guid: f1ccfbf736de46f4d800adb228156471, type: 2}
+  - {fileID: 11400000, guid: 350c6ab9537fb1c449cad40626922b47, type: 2}
+  - {fileID: 11400000, guid: 5c3c7d493e307f04583486ea4084fa99, type: 2}
+  - {fileID: 11400000, guid: 0042f2a41334cab48a266bc54ea3d410, type: 2}
+  - {fileID: 11400000, guid: 4bc6563d86dd9604e953cb929c138300, type: 2}
+  allInventory:
+  - {fileID: 11400000, guid: f98eb78d54bacf4478f9b4d5011091c3, type: 2}
+  - {fileID: 11400000, guid: 350c6ab9537fb1c449cad40626922b47, type: 2}
+  - {fileID: 11400000, guid: 0042f2a41334cab48a266bc54ea3d410, type: 2}
+  - {fileID: 11400000, guid: 2b92cd109788acd4694fbeff376a8d15, type: 2}
+  - {fileID: 11400000, guid: 4bc6563d86dd9604e953cb929c138300, type: 2}
+  - {fileID: 11400000, guid: c4ad8af2118ecdb46a910e747430dbef, type: 2}
+  - {fileID: 11400000, guid: f12d88180dd1fa14b89408c2c5d6cf9c, type: 2}
+  - {fileID: 11400000, guid: 4028d2a2928b33f40a99dd7923770943, type: 2}
+  - {fileID: 11400000, guid: f1ccfbf736de46f4d800adb228156471, type: 2}
+  - {fileID: 11400000, guid: 793fde9d9d1efca4d9b2801cff441ad5, type: 2}
+  - {fileID: 11400000, guid: 5c3c7d493e307f04583486ea4084fa99, type: 2}
+  - {fileID: 11400000, guid: da0933ec9f6b4ca469b31db29e20f69d, type: 2}
+  - {fileID: 11400000, guid: 0c6f700e0cf864247a3317603cb4e646, type: 2}
+  - {fileID: 11400000, guid: 599fa0ac98a1c7244b1c47c63926904f, type: 2}
+  - {fileID: 11400000, guid: deeab7262f5c7d346843a828c8767c38, type: 2}
+  currentWeapon: {fileID: 11400000, guid: da0933ec9f6b4ca469b31db29e20f69d, type: 2}
+  currentArmor: {fileID: 0}
+  expVal: 600

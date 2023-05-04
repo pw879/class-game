@@ -12,6 +12,7 @@ public class DialogManager : MonoBehaviour
     public string[] dialogLines;
     public int currentLine;
     private bool justStarted;
+    public bool moveOverride; 
     // Start is called before the first frame update
 
     private void Awake(){
@@ -39,6 +40,10 @@ public class DialogManager : MonoBehaviour
                     }
             }
         }
+    }
+
+    public void closeDialog(){
+        dialogBox.SetActive(false);
     }
 
     public void showDialog(string[] newLines){

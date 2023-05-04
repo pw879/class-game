@@ -6,26 +6,53 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public VectorValue startingPosition; 
     private float attackTime = .15f;
     private float attackCounter = .33f;
     private bool isAttacking;
+    private HealthManager healthMan;
 
-    //public bool isKnockingBack;
-    //public float knockBackTime, knockBackForce;
-    //private float knockBackCounter;
-    //private Vector2 knockDir;
 
-    public Rigidbody2D rb;
-    public Animator animator;
+    private Rigidbody2D rb;
+    private Animator animator;
     Vector2 movement;
+    [Header("Getting currently Equipped Items (Armor, and Weapon)")]
+    [SerializeField] private PlayerInventory myInventory;
+
+    [Header("Base Attack Firing Direction Transforms")]
+    [SerializeField] private Transform fireRight;
+    [SerializeField] private Transform fireLeft;
+    [SerializeField] private Transform fireUp;
+    [SerializeField] private Transform fireDown;
+
+    [SerializeField] private GameObject currentShot;
+    private GameObject myBaseShot;
+
+    void Start(){
+        myBaseShot = new GameObject();
+    }
 
 
+    void Awake(){
+
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        healthMan = GetComponent<HealthManager>();
+        if(!startingPosition.isNotFirstRun){
+            transform.position = new Vector2(12.5f,5f);
+            startingPosition.currentHealth = 100;
+            startingPosition.isNotFirstRun = true;
+        } else{
+            transform.position = startingPosition.initialValue;
+            //transform.position = new Vector2(-3.9f, -5.04f ); //life support
+            //transform.position = new Vector2(-12.99f, 3.7f);
+            healthMan.currentHealth = startingPosition.currentHealth;
+        }
+    }
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         //Input Handled here
-        //if(!isKnockingBack){
-            if(!DialogManager.instance.dialogBox.activeInHierarchy){
+            if(!DialogManager.instance.dialogBox.activeInHierarchy || DialogManager.instance.moveOverride == true){
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
             animator.SetFloat("Horizontal", movement.x);
@@ -57,28 +84,14 @@ public class PlayerMovement : MonoBehaviour
                     Debug.Log("Bool is Attack");
                 }
                 isAttacking = true;
+                baseShotFired(myInventory.currentWeapon.baseFire);
+                
             }
-            } else{
+            } else {
                 rb.velocity = Vector2.zero;
                 animator.SetFloat("Speed", 0);
             }
-        //} else{
-            //knockBackCounter -= Time.deltaTime;
-            //rb.velocity = knockDir * knockBackForce;
-            //if (knockBackCounter <= 0){
-           //     isKnockingBack = false;
-           // }
-        //}
     }
-
-    //public void knockBack(Vector2 knockerPosition){
-    //    knockBackCounter = knockBackTime;
-    //    isKnockingBack = true;
-    //    knockDir = knockerPosition - new Vector2(transform.position.x, transform.position.y);
-    //    knockDir.Normalize();
-        //find the enemy that is knocking you back to determine the direction
-
-    //}
 
     //Move Player with Physics, executed on a fixed timer
     void FixedUpdate(){
@@ -86,4 +99,25 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    void baseShotFired(GameObject baseShot){
+        float x = animator.GetFloat("LastMoveX");
+        float y = animator.GetFloat("LastMoveY");
+        if(x == 0 && y > 0){
+            myBaseShot = Instantiate(baseShot, fireUp);
+        }
+        if(x == 0 && y < 0){
+            myBaseShot = Instantiate(baseShot, fireDown);
+        }
+        if(x > 0 && y == 0){
+            myBaseShot = Instantiate(baseShot, fireRight);
+        }
+        if(x < 0 && y == 0){
+            myBaseShot = Instantiate(baseShot, fireLeft);
+        }
+        Destroy(myBaseShot, .5f);
+        //isCharging = false;
+        //chargeTime = 0;
+    }
+
 }
+

@@ -14,7 +14,37 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartMenu.unity
     guid: 941ba905d27bff84ea3865bd8e639191
-  - enabled: 1
+  - enabled: 0
     path: Assets/Main.unity
     guid: 5b2ddcd2bce0d1e42ae94f6eb2a42554
+  - enabled: 1
+    path: Assets/Scenes/Level 1/Town 1.unity
+    guid: 56d82497d990f5c4e96ccc551251984b
+  - enabled: 1
+    path: Assets/Scenes/Store_1.unity
+    guid: 5cfc637e9ff3d4042817a47028a9613d
+  - enabled: 1
+    path: Assets/Scenes/Residence1.unity
+    guid: 1b564300aa6753f4ebcc5c4c26bce140
+  - enabled: 1
+    path: Assets/Scenes/Area A.unity
+    guid: 1b0e76bf908b26642bd2e9c19cf71159
+  - enabled: 1
+    path: Assets/Scenes/Area A Cave 2.unity
+    guid: 240cb7d5c1710a3429dbc38bfe0f1de0
+  - enabled: 1
+    path: Assets/Scenes/Area A Cave 3.unity
+    guid: 05e1143230f779545ae8c74210fed2a9
+  - enabled: 1
+    path: Assets/Scenes/Boss Cave.unity
+    guid: 6729a9a4d9a9207419ceb247034cdc5f
+  - enabled: 1
+    path: Assets/Scenes/Residence 2.unity
+    guid: 79c0fb49611abd04bab5ab68c8fec908
+  - enabled: 1
+    path: Assets/Scenes/Lounge.unity
+    guid: 5163a8bdb71b6bd45a854e212544e242
+  - enabled: 1
+    path: Assets/Scenes/LifeSupport.unity
+    guid: 49f1df8f1a59989419af73a1f0a0bf34
   m_configObjects: {}

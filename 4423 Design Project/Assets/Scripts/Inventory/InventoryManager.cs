@@ -11,14 +11,20 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private GameObject useButton;
+    [SerializeField] private GameObject equipButton;
     public InventoryItem currentItem;
 
-    public void SetTextAndButton(string description, bool buttonActive){
+    public void SetTextAndButton(string description, bool useButtonActive, bool equipButtonActive){
         descriptionText.text = description;
-        if(buttonActive){
+        if(useButtonActive){
             useButton.SetActive(true);
         }else{
             useButton.SetActive(false);
+        }
+        if(equipButtonActive){
+            equipButton.SetActive(true);
+        }else{
+            equipButton.SetActive(false);
         }
     }
 
@@ -42,16 +48,18 @@ public class InventoryManager : MonoBehaviour
         }
     }
     // Start is called before the first frame update
-    void Start()
+    void OnEnable() // gets called anytime an object is enabled
     {
+        clearInventorySlots();
         MakeInventorySlots();
-        SetTextAndButton("", false);
+        SetTextAndButton("", false, false);
     }
 
-    public void SetupDescriptionAndButton(string newDescriptionString, bool isButtonUsable, InventoryItem newItem){
+    public void SetupDescriptionAndButton(string newDescriptionString, bool isButtonUsable, bool canEquip, InventoryItem newItem){
         currentItem = newItem;
         descriptionText.text = newDescriptionString;
         useButton.SetActive(isButtonUsable); 
+        equipButton.SetActive(canEquip);
 
     }
 
@@ -64,9 +72,19 @@ public class InventoryManager : MonoBehaviour
             MakeInventorySlots();
             //check for 0
             if(currentItem.numberHeld == 0 ){
-                SetTextAndButton("", false );
+                SetTextAndButton("", false, false );
             }
         }
+    }
+
+    public void equipButtonPressed(){
+        if(currentItem.isArmor){
+            PlayerInventory.currentArmor = currentItem;
+        }
+        if(currentItem.isWeapon){
+            PlayerInventory.currentWeapon = currentItem;
+        }
+
     }
 
     void clearInventorySlots(){

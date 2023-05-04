@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cbd1e7eda7e1bd4585e74042a7012ca, type: 3}
+  m_Name: Arc Generator Thano Capacitor
+  m_EditorClassIdentifier: 
+  itemName: Arc Generator Thano Capacitor
+  itemDescription: 'This item enhances the energy Matrix of most Thanatos grids.
+    It greatly increases the range and performance of a standard Arc Generator. Used
+    to vaporize the microDiamond deposits in the distortion tanks of Hilbert class
+    Asteroid Tugs.  '
+  itemImage: {fileID: 21300000, guid: 7d1af4e39f6a1a54eaa34170f6d0d334, type: 3}
+  numberHeld: 1
+  usable: 0
+  unique: 1
+  isArmor: 0
+  armorVal: 0
+  isWeapon: 0
+  attackVal: 0
+  weaponClass: 0
+  isEquiped: 0
+  thisEvent:
+    m_PersistentCalls:
+      m_Calls: []

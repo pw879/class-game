@@ -28,7 +28,7 @@ public class InventorySlot : MonoBehaviour
     //called when the an item is tapped on
     public void ClickedOn(){
         if(thisItem){ // Item existence check
-            thisManager.SetupDescriptionAndButton(thisItem.itemDescription, thisItem.usable, thisItem);
+            thisManager.SetupDescriptionAndButton(thisItem.itemDescription, thisItem.usable, thisItem.canEquip, thisItem);
         }
     }
 

@@ -16,7 +16,7 @@ public class KnockBack : MonoBehaviour
     //check to see if enemy is triggered
     private void OnTriggerEnter2D(Collider2D other){
         
-        if (other.gameObject.CompareTag("Enemy")){
+        if (other.gameObject.CompareTag("Enemy") && other.gameObject != null){
             //change rigid body system
             Rigidbody2D enemy = other.GetComponent<Rigidbody2D>();
             if(enemy != null){
@@ -37,8 +37,10 @@ public class KnockBack : MonoBehaviour
     private IEnumerator KnockCo(Rigidbody2D enemy){
         if(enemy != null){
             yield return new WaitForSeconds(knockTime);
+            if(enemy != null){
             enemy.velocity = Vector2.zero; 
             enemy.isKinematic = true;
+            }
         }
     }
 }

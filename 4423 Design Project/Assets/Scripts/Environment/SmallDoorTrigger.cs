@@ -4,25 +4,33 @@ using UnityEngine;
 
 public class SmallDoorTrigger : MonoBehaviour
 {
+    [SerializeField] private SmallDoorFloorTrigger floorTrigger;
     [SerializeField] private SmallDoorSetActive door;
-    [SerializeField] private Transform playerTransform;
-    public float interactRadius;
+    private Transform playerTransform;
+    //public float interactRadius;
     private bool isOpen = false;
+    public bool canOpen = true;
+    private SFXManager sfxMan;
+
+    void Start(){
+        playerTransform = GameObject.FindWithTag("MyPlayer").transform;
+        sfxMan = FindObjectOfType<SFXManager>();
+    }
 
     // Update is called once per frame
     void Update(){
-        Collider2D[] colliderArray = Physics2D.OverlapCircleAll(playerTransform.position, interactRadius );
-        foreach (Collider2D col in colliderArray){
-            SmallDoorSetActive door = col.GetComponent<SmallDoorSetActive>();
-            if(door != null){
-            if(Input.GetKeyDown(KeyCode.F) && isOpen == false){
+            if(Input.GetKeyDown(KeyCode.F) && floorTrigger.isActive == true && isOpen == false && canOpen == true ){
                 door.openDoor();
                 isOpen = true;
-            } else if (Input.GetKeyDown(KeyCode.F) && isOpen == true){
+            }
+            else if(Input.GetKeyDown(KeyCode.F) && floorTrigger.isActive == true && isOpen == true && canOpen == true ) {
                 door.closeDoor();
                 isOpen = false;
             }
+            else if(Input.GetKeyDown(KeyCode.F) && floorTrigger.isActive == true && isOpen == false && canOpen == false ){
+                if(sfxMan){
+                sfxMan.DoorFail.Play();
+                }
             }
-        } 
     }
 }

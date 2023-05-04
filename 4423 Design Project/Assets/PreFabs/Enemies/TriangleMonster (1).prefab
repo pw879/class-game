@@ -31,9 +31,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3319708538263843519}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.1895046, y: -37.012375, z: -0.28386894}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3319708539005553812}
@@ -79,8 +79,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1225817647
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 1194055633, guid: 8be198e9000d7174a99d0ad4ae9d1ffe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -172,8 +172,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d97b4d9cf8e8d409fece54fb10262a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 3
+  startingHealth: 5
+  floatingTextPrefab: {fileID: 6961690622260152821, guid: 41c60a9cbb0a32a409053f1413a3adc6, type: 3}
+  expToGive: 25
   deathPreFab: {fileID: 6561764381837696306, guid: a9e5e0a5964934148a5e48a258988abc, type: 3}
+  crystalDrop: {fileID: 7921178324160763538, guid: a7fc4bac22d4c484997e6394496a8859, type: 3}
+  crystalMaxValue: 6
+  healthDropChance: 100
   trianglePosition: {fileID: 3319708538263843524}
 --- !u!114 &3319708538263843527
 MonoBehaviour:
@@ -202,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  maxRange: 5
+  maxRange: 10
   minRange: 0
 --- !u!114 &3319708538263843526
 MonoBehaviour:
@@ -245,7 +250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3319708539005553803}
   m_LocalRotation: {x: -0, y: -0, z: -0.08650671, w: 0.9962513}
-  m_LocalPosition: {x: -0.02, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -266,10 +271,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
   m_LightType: 3
-  m_BlendStyleIndex: 0
+  m_BlendStyleIndex: 1
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 0, b: 0.92387056, a: 1}
-  m_Intensity: 0.21
+  m_Color: {r: 1, g: 0, b: 0.9254904, a: 1}
+  m_Intensity: 0.25
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
