@@ -5694,10 +5694,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 6108254763823562562, guid: 3d16385f36dc4bd43b84ebc07d771796, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6108254763823562563, guid: 3d16385f36dc4bd43b84ebc07d771796, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5786,10 +5782,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2070936578}
-    - target: {fileID: 6108254764793537198, guid: 3d16385f36dc4bd43b84ebc07d771796, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 25
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d16385f36dc4bd43b84ebc07d771796, type: 3}
 --- !u!1 &438460034
@@ -6780,64 +6772,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13dbc7fd872a51f4992d9f495bb48478, type: 3}
---- !u!1 &504706428
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 504706429}
-  - component: {fileID: 504706430}
-  m_Layer: 0
-  m_Name: Conversation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &504706429
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504706428}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 205086055}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &504706430
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504706428}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0075193644, y: -0.24061775}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.8572052, y: 3.1354942}
-  m_EdgeRadius: 0
 --- !u!1001 &505203834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7036,34 +6970,6 @@ PrefabInstance:
       propertyPath: healthMan
       value: 
       objectReference: {fileID: 815523066}
-    - target: {fileID: 5581429135414804513, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5581429135414804513, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5581429135414804513, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5581429135463084431, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5581429135463084431, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5581429135851205656, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5581429135851205656, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5581429136136090832, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -7156,26 +7062,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2070936578}
-    - target: {fileID: 5581429136437507422, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5581429136595703085, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5581429136595703085, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5581429136595703085, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5581429136873748773, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6563554391739370894, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
       propertyPath: healthMan
       value: 

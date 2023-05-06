@@ -19,7 +19,9 @@ public class Player_DamageSource : MonoBehaviour
         
         if (other.gameObject.GetComponent<Enemy_Health>()){
             Enemy_Health enemyHealth = other.gameObject.GetComponent<Enemy_Health>();
+            if(sfxMan){
             sfxMan.enemyHurt.Play();
+            }
             enemyHealth.TakeDamage(currentDamage);
         }
     }

@@ -44,6 +44,7 @@ public class UI_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        setGunLevel();
         // set the value displayed on the healthbar
         healthBar.maxValue = healthMan.maxHealth;
         healthBar.value = healthMan.currentHealth;
@@ -109,7 +110,7 @@ public class UI_Manager : MonoBehaviour
         // check if the chargeTime is more than 6 seconds (level 3)
         if(myGun.chargeTime >= 6 && gunLevel ==3){
             chargeBar.maxValue = 2;
-            chargeBar.value = (myGun.chargeTime - 4);
+            chargeBar.value = (myGun.chargeTime - 6);
             chargeLevel.maxValue = 3;
             chargeLevel.value = 3;
         }

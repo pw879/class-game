@@ -1655,21 +1655,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e1df7deffad164e8006336b355e581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
+  inventory: {fileID: 11400000, guid: c47e1058ede76d2409bb6b702bdcc260, type: 2}
   healthBar: {fileID: 5581429136967737219}
   chargeBar: {fileID: 5581429134995994801}
   chargeLevel: {fileID: 5581429135849504263}
   hpText: {fileID: 5581429135761664617}
   gunLevel: 0
-  flame: {fileID: 0}
-  Arc: {fileID: 0}
-  Void: {fileID: 0}
-  flame2: {fileID: 0}
-  Arc2: {fileID: 0}
-  Void2: {fileID: 0}
-  flame3: {fileID: 0}
-  Arc3: {fileID: 0}
-  Void3: {fileID: 0}
+  flame: {fileID: 11400000, guid: da0933ec9f6b4ca469b31db29e20f69d, type: 2}
+  Arc: {fileID: 11400000, guid: 5c3c7d493e307f04583486ea4084fa99, type: 2}
+  Void: {fileID: 11400000, guid: deeab7262f5c7d346843a828c8767c38, type: 2}
+  flame2: {fileID: 11400000, guid: f1ccfbf736de46f4d800adb228156471, type: 2}
+  Arc2: {fileID: 11400000, guid: f12d88180dd1fa14b89408c2c5d6cf9c, type: 2}
+  Void2: {fileID: 11400000, guid: 0c6f700e0cf864247a3317603cb4e646, type: 2}
+  flame3: {fileID: 11400000, guid: 793fde9d9d1efca4d9b2801cff441ad5, type: 2}
+  Arc3: {fileID: 11400000, guid: 4028d2a2928b33f40a99dd7923770943, type: 2}
+  Void3: {fileID: 11400000, guid: 599fa0ac98a1c7244b1c47c63926904f, type: 2}
   EXPText: {fileID: 5581429136491251837}
   LVLText: {fileID: 5581429135253623958}
 --- !u!114 &5581429136136090926

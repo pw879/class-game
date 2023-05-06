@@ -1596,10 +1596,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RobotObject
       objectReference: {fileID: 0}
-    - target: {fileID: 2596142008831394574, guid: 5d2ee863478a5ae45899c7c3cfc36555, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d2ee863478a5ae45899c7c3cfc36555, type: 3}
 --- !u!4 &486285819 stripped
@@ -7100,46 +7096,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5581429136136090925, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: Arc
-      value: 
-      objectReference: {fileID: 11400000, guid: 5c3c7d493e307f04583486ea4084fa99, type: 2}
-    - target: {fileID: 5581429136136090925, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: Arc2
-      value: 
-      objectReference: {fileID: 11400000, guid: f12d88180dd1fa14b89408c2c5d6cf9c, type: 2}
-    - target: {fileID: 5581429136136090925, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: Arc3
-      value: 
-      objectReference: {fileID: 11400000, guid: 4028d2a2928b33f40a99dd7923770943, type: 2}
-    - target: {fileID: 5581429136136090925, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: Void
-      value: 
-      objectReference: {fileID: 11400000, guid: deeab7262f5c7d346843a828c8767c38, type: 2}
-    - target: {fileID: 5581429136136090925, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: Void2
-      value: 
-      objectReference: {fileID: 11400000, guid: 0c6f700e0cf864247a3317603cb4e646, type: 2}
-    - target: {fileID: 5581429136136090925, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: Void3
-      value: 
-      objectReference: {fileID: 11400000, guid: 599fa0ac98a1c7244b1c47c63926904f, type: 2}
-    - target: {fileID: 5581429136136090925, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: flame
-      value: 
-      objectReference: {fileID: 11400000, guid: da0933ec9f6b4ca469b31db29e20f69d, type: 2}
-    - target: {fileID: 5581429136136090925, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: flame2
-      value: 
-      objectReference: {fileID: 11400000, guid: f1ccfbf736de46f4d800adb228156471, type: 2}
-    - target: {fileID: 5581429136136090925, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: flame3
-      value: 
-      objectReference: {fileID: 11400000, guid: 793fde9d9d1efca4d9b2801cff441ad5, type: 2}
-    - target: {fileID: 5581429136136090925, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
-      propertyPath: inventory
-      value: 
-      objectReference: {fileID: 11400000, guid: c47e1058ede76d2409bb6b702bdcc260, type: 2}
     - target: {fileID: 5581429136437507422, guid: 42384e32deeeaed40b29d84d9df72e0d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
