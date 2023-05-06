@@ -308,6 +308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: --SFX Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 6307990141771954547, guid: 76281aa1232a1eb41a0fd6265f1fa3ea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76281aa1232a1eb41a0fd6265f1fa3ea, type: 3}
 --- !u!1 &1640916753
